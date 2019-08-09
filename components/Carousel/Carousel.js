@@ -18,8 +18,6 @@
   </div>
 */
 
-const carouselCont=document.querySelector('.carousel-container');
-
 const carouselImages = [
   'mountains.jpeg',
   'computer.jpeg',
@@ -56,4 +54,43 @@ function carousel(){
   return newCarousel;
 }
 // console.log(carousel());
+const carouselCont=document.querySelector('.carousel-container');
 carouselCont.appendChild(carousel());
+
+const carKids=document.querySelectorAll('.carousel img');
+
+const lButtonListener=document.querySelector('.left-button');
+lButtonListener.addEventListener('click',e=>{
+  let nextSlide=0;
+
+  for(let i=0; i<carKids.length;i++){
+   if (carKids[i].classList.contains('imgShow')){
+     carKids[i].classList.toggle('imgShow');
+     if (i==0){
+      nextSlide=carKids.length-1;
+     } else{
+      nextSlide=i-1;
+     }
+ 
+   }
+  }
+  carKids[nextSlide].classList.toggle('imgShow');
+});
+
+const rButtonListener=document.querySelector('.right-button');
+rButtonListener.addEventListener('click',e=>{
+  let nextSlide=0;
+
+  for(let i=0; i<carKids.length;i++){
+   if (carKids[i].classList.contains('imgShow')){
+     carKids[i].classList.toggle('imgShow');
+     if (i<carKids.length-1){
+      nextSlide=i+1;
+     } else{
+      nextSlide=0;
+     }
+ 
+   }
+  }
+  carKids[nextSlide].classList.toggle('imgShow');
+});
