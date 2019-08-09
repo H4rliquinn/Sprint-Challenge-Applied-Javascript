@@ -303,3 +303,6 @@ body {
   width: 100%;
   display: none;
 }
+.carousel .imgShow {
+  display: block;
+}

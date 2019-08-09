@@ -41,7 +41,7 @@ Edit this document to include your answers after each question. Make sure to lea
     Arrays have many more built-in methods that can be used on the list of items.
 
 5. What is a component?
-    A component is an, often re-usable, piece of code that gets added to a website.
+    A component is an, often re-usable, piece of code that can be added to a website.
     
 ### Git Set up
 
